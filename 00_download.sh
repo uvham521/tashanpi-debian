@@ -20,3 +20,10 @@ if [ ! -d "${build_path}/linux" ]; then
 else
     echo "linux 目录已存在, 跳过拉取"
 fi
+
+# 判断firmware文件夹是否存在
+if [ ! -d "${build_path}/firmware" ]; then
+    cp -r ${script_path}/downloads/firmware ${build_path}
+else
+    echo "firmware 目录已存在, 跳过拉取"
+fi

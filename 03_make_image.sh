@@ -22,9 +22,3 @@ parted -s $sdcard_image set 1 boot on
 
 # 创建 rootfs 分区 (Linux, 0x83)
 parted -s $sdcard_image mkpart primary ext4 128M 100%
-
-# 将 u-boot 写入 32K 位置
-dd if=${output_path}/u-boot/lckfb-tspi-rk3566.uboot of=$sdcard_image bs=1 seek=32768 conv=notrunc
-
-# 压缩磁盘镜像为 .xz 格式
-xz -z ${sdcard_image} -T 0

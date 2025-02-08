@@ -7,8 +7,8 @@ build_path="${script_path}/build"
 output_path="${script_path}/output"
 
 export CROSS_COMPILE=aarch64-linux-gnu-
-export BL31=${script_path}/downloads/rk3568_bl31_v1.44.elf
-export ROCKCHIP_TPL=${script_path}/downloads/rk3566_ddr_1056MHz_v1.23.bin
+export BL31=${script_path}/downloads/rkbin/rk3568_bl31_v1.44.elf
+export ROCKCHIP_TPL=${script_path}/downloads/rkbin/rk3566_ddr_1056MHz_v1.23.bin
 
 cd ${build_path}/u-boot
 
