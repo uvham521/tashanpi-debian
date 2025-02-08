@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+trap 'echo "Error occurred at line $LINENO"; exit 1' ERR
 
 script_path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 build_path="${script_path}/build"
